@@ -1,0 +1,7 @@
+          tmp_dir: "/tmp"
+          tmp_file: "{{ tmp_dir }}/sonar.zip"
+          working_dir: "{{ tmp_dir }}/sonarqube-{{ sonar_ver }}"
+          sonar_web_host: "10.208.75.87"
+          sonar_web_port: "5342"
+          sonar_web_context: "/sonar"
+

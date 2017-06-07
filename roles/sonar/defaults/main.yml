@@ -1,0 +1,3 @@
+sonar_ver: "6.4"
+sonar_base_url: "https://sonarsource.bintray.com/Distribution/sonarqube/"
+sonar_prog: "sonarqube"

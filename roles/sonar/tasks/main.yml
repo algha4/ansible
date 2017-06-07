@@ -1,0 +1,19 @@
+
+- name: download zip
+  get_url:
+    url="{{ sonar_base_url }}{{ sonar_prog }}-{{sonar_ver}}.zip"
+    dest={{ tmp_dir }}
+
+- name: Unzip zip
+  unarchive:
+    src="{{ tmp_dir }}/{{ sonar_prog }}-{{sonar_ver}}.zip"
+    dest="{{ tmp_dir }}"
+    remote_src=yes
+
+- name: Make config template
+  template:
+    src: "sonar.properties.j2"
+    dest: "{{ working_dir }}/conf/sonar.properties"
+
+- name: Run sonar
+  command: "{{ working_dir }}/bin/linux-x86-64/sonar.sh start"
