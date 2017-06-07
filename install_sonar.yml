@@ -1,4 +1,5 @@
 ---
+# Test commita do repo
 - hosts: "localhost"
   roles:
           - { name: sonar, sonar_ver: "5.6.6" } 
